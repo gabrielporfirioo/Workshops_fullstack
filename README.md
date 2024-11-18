@@ -100,11 +100,15 @@ export const environment = {
    <img src="/Fast_prints/colaboradores.png">
    <img src="/Fast_prints/colaboradores_add.png">
 
-3. **Workshops**:
+2. **Workshops**:
 
    <img src="/Fast_prints/workshop_list.png">
    <img src="/Fast_prints/workshop_list2.png">
    <img src="/Fast_prints/worskhop_add.png">
+
+3. **Database**:
+   <img src="/Fast_prints/bd.png">
+
 
    <br/><br/>
 
