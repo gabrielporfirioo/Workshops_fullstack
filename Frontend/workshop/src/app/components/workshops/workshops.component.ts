@@ -29,13 +29,13 @@ export class WorkshopsComponent implements OnInit {
     private colaboradoresService: ColaboradoresService
   ) {}
 
-  
+  //Carregar dados
 
   ngOnInit(): void {
     this.loadWorkshops();
     this.loadColaboradores();
   }
-
+  //Carrega os workshops
   loadWorkshops(): void {
     this.workshopsService.getWorkshops().subscribe({
       next: (data: any[]) => {
@@ -66,7 +66,7 @@ export class WorkshopsComponent implements OnInit {
   
   
   
-
+  // Carrega os colaboradores
   loadColaboradores(): void {
     this.colaboradoresService.getColaboradores().subscribe({
       next: (data: any[]) => {
@@ -79,7 +79,7 @@ export class WorkshopsComponent implements OnInit {
   }
 
 
-
+  //Deleta os colaboradores
   deleteWorkshop(workshopId: number): void {
     this.workshopsService.deleteWorkshop(workshopId).subscribe({
       next: () => {
@@ -123,7 +123,7 @@ export class WorkshopsComponent implements OnInit {
     this.selectedColaboradores = []; // Resetar seleção de colaboradores
   }
   
-
+  //Salva o novo workshop criado
   saveNewWorkshop(): void {
     if (!this.newWorkshop.nome || !this.newWorkshop.data || !this.newWorkshop.descricao) {
       alert('Preencha todos os campos!');

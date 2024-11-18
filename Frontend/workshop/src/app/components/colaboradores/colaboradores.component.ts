@@ -19,10 +19,12 @@ export class ColaboradoresComponent implements OnInit {
 
 
   constructor(private colaboradoresService: ColaboradoresService) {}
-
+  
+  //Carrega os dados de colaboradores
   ngOnInit(): void {
     this.loadColaboradores();
   }
+
 
   loadColaboradores(): void {
     this.colaboradoresService.getColaboradores().subscribe({
@@ -40,6 +42,7 @@ export class ColaboradoresComponent implements OnInit {
     this.newColaborador = { nome: '' };
   }
 
+  //Cria um novo Colaborador
   createColaborador(): void {
     if (this.newColaborador.nome) {
       this.colaboradoresService.createColaborador(this.newColaborador).subscribe({
@@ -54,7 +57,7 @@ export class ColaboradoresComponent implements OnInit {
     }
   }
 
-
+  //Edição dos colaboradores criados
   startEdit(colaborador: any): void {
     this.isEditing = true;
     this.editingColaborador = { ...colaborador };
@@ -82,6 +85,8 @@ export class ColaboradoresComponent implements OnInit {
     this.editingColaborador = null;
   }
 
+
+  //Deleta colaboradores
   deleteColaborador(colaboradorId: number): void {
     this.colaboradoresService.deleteColaborador(colaboradorId).subscribe({
       next: () => {
