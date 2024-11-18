@@ -1,0 +1,102 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 20px auto;
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    text-align: center;
+    color: #333;
+  }
+  
+  header {
+    background: #6200ee;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  header a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+  }
+  
+  header a:hover {
+    text-decoration: underline;
+  }
+  
+  .collaborator-list {
+    list-style: none;
+    padding: 0;
+  
+    li {
+      margin-bottom: 15px;
+    }
+  }
+  
+  .collaborator-card {
+    background: #f4f4f4;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  button {
+    background: #6200ee;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+  
+    &:hover {
+      background: #3700b3;
+    }
+  }
+  
+  .edit-modal {
+    margin-top: 20px;
+    padding: 20px;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+  
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+  
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+  
+    .buttons {
+      margin-top: 10px;
+      display: flex;
+      gap: 10px;
+    }
+  }
+  

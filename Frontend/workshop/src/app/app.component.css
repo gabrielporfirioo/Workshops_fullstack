@@ -1,0 +1,39 @@
+/* Estilo padrão para os botões */
+a {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #007bff; /* Azul padrão */
+    border-radius: 5px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  /* Hover: quando o mouse estiver sobre o botão */
+    a:hover {
+    background-color: #0056b3; /* Azul mais escuro */
+    border-color: #004085; /* Adicionar borda */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+  }
+  
+  /* Estado ativo (quando selecionado ou clicado) */
+    :-moz-any().selected {
+    background-color: #28a745; /* Verde */
+    color: #ffffff;
+    border-color: #218838;
+    box-shadow: 0 4px 10px rgba(40, 167, 69, 0.5); /* Sombra verde */
+  }
+  
+  /* Foco no teclado */
+  a:focus {
+    outline: none;
+    border-color: #ffc107; /* Amarelo */
+    box-shadow: 0 0 5px 2px rgba(255, 193, 7, 0.5);
+  }
+  

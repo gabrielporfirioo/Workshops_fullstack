@@ -1,0 +1,99 @@
+.container {
+  font-family: Arial, sans-serif;
+}
+
+h2 {
+  color: #007bff;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  margin: 5px 0;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  cursor: pointer;
+}
+
+ul li:hover {
+  background-color: #f1f1f1;
+}
+
+.workshop-details {
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f5f5f5;
+}
+
+button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+    
+}
+
+button:hover {
+  background-color: #004690;
+}
+
+.create-button{
+  background-color: rgb(19, 147, 83);
+}
+
+.create-button:hover{
+  background-color: rgb(14, 113, 64);
+}
+
+.delete-button {
+  padding: 5px 10px;
+  background-color: #dc3545;
+  margin-left: 90%;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.delete-button:hover {
+  background-color: #c82333;
+}
+
+.new-workshop-form select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.new-workshop-form select option {
+  padding: 5px;
+}
+
+.checkbox-list {
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.checkbox-list div {
+  margin-bottom: 5px;
+}
+
+.checkbox-list input {
+  margin-right: 5px;
+}
+

@@ -1,0 +1,29 @@
+<div class="container">
+  <h2>Colaboradores</h2>
+
+  <!-- Lista de colaboradores -->
+  <ul>
+    <li *ngFor="let colaborador of colaboradores">
+      {{ colaborador.nome }}
+      <button (click)="startEdit(colaborador)">Editar</button>
+      <button class="delete"(click)="deleteColaborador(colaborador.id)">Excluir</button>
+    </li>
+  </ul>
+
+  <!-- Formulário de Criação -->
+  <button class="novo" (click)="toggleCreate()">Adicionar Novo Colaborador</button>
+  <div *ngIf="isCreating">
+    <h3>Novo Colaborador</h3>
+    <input [(ngModel)]="newColaborador.nome" placeholder="Nome do Colaborador" />
+    <button (click)="createColaborador()">Salvar</button>
+    <button (click)="toggleCreate()">Cancelar</button>
+  </div>
+
+  <!-- Formulário de Edição -->
+  <div *ngIf="isEditing">
+    <h3>Editar Colaborador</h3>
+    <input [(ngModel)]="editingColaborador.nome" placeholder="Nome do Colaborador" />
+    <button (click)="saveEdit()">Salvar</button>
+    <button (click)="cancelEdit()">Cancelar</button>
+  </div>
+</div>

@@ -1,0 +1,92 @@
+<div class="container">
+  <h2>Workshops</h2>
+
+  <!-- Botão para criar novo workshop -->
+  <button (click)="startCreate()" class="create-button">Criar Novo Workshop</button>
+
+  <!-- Lista de workshops -->
+  <ul>
+    <li *ngFor="let workshop of workshops" (click)="selectWorkshop(workshop.id)">
+      <strong>{{ workshop.nome }}</strong>
+      <button (click)="deleteWorkshop(workshop.id)" class="delete-button">Excluir</button>
+    </li>
+  </ul>
+
+  <!-- Detalhes do workshop selecionado -->
+  <div *ngIf="selectedWorkshop" class="workshop-details">
+    <h3>Detalhes do Workshop</h3>
+    <p><strong>Nome:</strong> {{ selectedWorkshop.nome }}</p>
+    <p><strong>Data:</strong> {{ selectedWorkshop.data | date: 'short' }}</p>
+    <p><strong>Descrição:</strong> {{ selectedWorkshop.descricao }}</p>
+    <p><strong>Colaboradores:</strong></p>
+    <ul>
+      <li *ngFor="let colaborador of selectedWorkshop.colaboradores">
+        {{ colaborador.nome }}
+      </li>
+    </ul>
+    <button (click)="closeDetails()">Fechar</button>
+  </div>
+
+  <!-- Formulário para criar novo workshop -->
+  <div *ngIf="isCreating" class="new-workshop-form">
+    <h3>Criar Novo Workshop</h3>
+    <label>
+      Nome:
+      <input [(ngModel)]="newWorkshop.nome" type="text" placeholder="Nome do workshop" />
+    </label>
+    <label>
+      Data:
+      <input [(ngModel)]="newWorkshop.data" type="date" />
+    </label>
+    <label>
+      Descrição:
+      <input [(ngModel)]="newWorkshop.descricao" type="text" placeholder="Descrição" />
+    </label>
+    <label>
+      <strong>Colaboradores:</strong>
+    </label>
+    <div class="checkbox-list">
+      <div *ngFor="let colaborador of colaboradores">
+        <label>
+          <input
+            type="checkbox"
+            [value]="colaborador.id"
+            (change)="toggleColaborador(colaborador.id, $event)"
+          />
+          {{ colaborador.nome }}
+        </label>
+      </div>
+    </div>
+    <div>
+      <button (click)="saveNewWorkshop()">Salvar</button>
+      <button (click)="cancelCreate()">Cancelar</button>
+    </div>
+  </div>
+  
+  
+
+
+
+
+
+
+<!-- <div class="container">
+  <h2>Workshops</h2> -->
+
+  <!-- Lista de workshops -->
+  <!-- <ul>
+    <li *ngFor="let workshop of workshops">
+      <strong>{{ workshop.nome }}</strong>
+      <p>{{ workshop.descricao }}</p>
+      <p>Data: {{ workshop.data | date: 'short' }}</p>
+
+      <p><strong>Colaboradores:</strong></p>
+      <ul>
+        <li *ngFor="let colaborador of workshop.colaboradores">
+          {{ colaborador.nome }}
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div> -->
+
