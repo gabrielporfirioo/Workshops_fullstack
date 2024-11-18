@@ -110,6 +110,9 @@ export const environment = {
 
    <img src="/Fast_prints/bd.png">
 
+4. **API**:
+
+  <img src="/Fast_prints/swagger.png">
 
    <br/><br/>
 
