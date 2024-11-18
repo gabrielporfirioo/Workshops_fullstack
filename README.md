@@ -107,6 +107,7 @@ export const environment = {
    <img src="/Fast_prints/worskhop_add.png">
 
 3. **Database**:
+
    <img src="/Fast_prints/bd.png">
 
 
