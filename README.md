@@ -117,6 +117,6 @@ export const environment = {
    <br/><br/>
 
 # 4. Dúvidas
-- Caso tenha dúvidas, entre em contato pelo e-mail: gabrielporfirio@gmail.com
+- Caso tenha dúvidas, entre em contato pelo e-mail: gabrielporfirio07@gmail.com
 
 
